@@ -365,7 +365,7 @@ export function prepareCommand(args: DebugProtocol.RunInTerminalRequestArguments
 				command += `cd ${quote(args.cwd)} && `;
 			}
 			if (args.env) {
-				command += 'cmd /C "';
+				command += 'cmd /V /C "';
 				for (let key in args.env) {
 					let value = args.env[key];
 					if (value === null) {
